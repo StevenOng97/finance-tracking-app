@@ -18,11 +18,16 @@ const Hero = () => {
       <h3 className="text-sm text-muted-foreground">
         Track your expenses, manage your income, and get insights on your money
       </h3>
-      <Link href={"/dashboard"}>
-        <Button className="mt-4 px-14 w-fit m-auto">
-          {user ? "Go to Dashboard" : "Get Started"}
-        </Button>
-      </Link>
+
+      {user ? (
+        <Link href={"/dashboard"}>
+          <Button className="mt-4 px-14 w-fit m-auto">Go to Dashboard</Button>
+        </Link>
+      ) : (
+        <Link href={"/sign-in"}>
+          <Button className="mt-4 px-14 w-fit m-auto">Get started</Button>
+        </Link>
+      )}
     </section>
   );
 };
