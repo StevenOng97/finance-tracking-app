@@ -14,4 +14,9 @@ export const config = {
   ],
 };
 
-const isProtectedRoute = createRouteMatcher(["/dashbard(.*)", "/wizard(.*)"]);
+const isProtectedRoute = createRouteMatcher([
+  "/dashboard(.*)",
+  "/wizard(.*)",
+  "/manage(.*)",
+  "/transactions(.*)",
+]);

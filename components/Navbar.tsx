@@ -25,8 +25,7 @@ function Navbar() {
       setItems(menuItems);
     }
   }, [user]);
-  if (!user) {
-  }
+
   return (
     <>
       <DesktopNavbar items={items} />
